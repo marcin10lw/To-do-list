@@ -27,7 +27,7 @@
 
 .section__newTask{
     padding: 10px;
-    border: 2px solid rgb(214, 214, 214);
+    border: 2px solid hsl(0, 0%, 84%);
     flex-grow: 1;
 }
 
@@ -75,7 +75,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 2px solid #cecece;
+    border-bottom: 2px solid hsl(0, 0%, 85%);
     gap: 20px;
 }
 
