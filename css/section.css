@@ -39,7 +39,7 @@
 
 .section__button{
     padding: 10px;
-    border: 2px solid teal;
+    border: 2px solid #008080;
     background-color: teal;
     color: white;
     cursor: pointer;
