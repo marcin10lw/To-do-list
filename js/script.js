@@ -1,15 +1,5 @@
 {
-  let tasks = [
-    {
-      content: "Zjeść kanapkę",
-      done: true,
-    },
-
-    {
-      content: "Zrobić prace domową",
-      done: false,
-    },
-  ];
+  let tasks = [];
 
   const setFocus = () => {
     const inputElement = document.querySelector(".js-inputTask");
@@ -65,20 +55,28 @@
     let list = "";
     for (const task of tasks) {
       list += `
-            <li class="section__task">
-                <div class="section__contentContainer">
-                    <button class="section__listButton js-toggleButton ${
-                      task.done
-                        ? "section__toggleButton--done"
-                        : "section__toggleButton--notDone"
-                    }"></button>
+        <li class="section__task">
+            <div class="section__contentContainer">
+                <button class="section__listButton js-toggleButton 
+                   ${
+                     task.done
+                       ? "section__toggleButton--done"
+                       : "section__toggleButton--notDone"
+                   }">
+                </button>
                         
-                    <p class="section__paragraph ${
-                      task.done ? "section__paragraph--done" : ""
-                    }">${task.content}</p>
-                </div>
-                    <button class="section__listButton section__listButton--delete js-deleteButton"></button>
-            </li>
+                <p class="section__paragraph ${
+                  task.done ? "section__paragraph--done" : ""
+                }">
+                    ${task.content}
+                </p>
+            </div>
+                    <button class="
+                      section__listButton 
+                      section__listButton--delete 
+                      js-deleteButton">
+                    </button>
+        </li>
         `;
     }
 
