@@ -39,12 +39,10 @@
 
   const toggleDone = () => {
     const toggleDoneButton = document.querySelectorAll(".js-toggleButton");
-    console.log(toggleDoneButton);
 
     toggleDoneButton.forEach((toggleButton, index) => {
       toggleButton.addEventListener("click", () => {
         tasks[index].done = !tasks[index].done;
-        console.log(tasks);
         render();
       });
     });

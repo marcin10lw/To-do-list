@@ -1,12 +1,8 @@
-
-.header__heading{
-    font-weight: bold;
-}
-
 .section{
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+
 }
 
 .section__container{
