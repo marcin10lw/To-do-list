@@ -37,6 +37,19 @@
     clearField();
   };
 
+  const toggleDone = () => {
+    const toggleDoneButton = document.querySelectorAll(".js-toggleButton");
+    console.log(toggleDoneButton);
+
+    toggleDoneButton.forEach((toggleButton, index) => {
+      toggleButton.addEventListener("click", () => {
+        tasks[index].done = !tasks[index].done;
+        console.log(tasks);
+        render();
+      });
+    });
+  };
+
   const deleteTask = () => {
     const deleteButtonElements = document.querySelectorAll(".js-deleteButton");
 
@@ -56,10 +69,17 @@
       list += `
             <li class="section__task">
                 <div class="section__contentContainer">
-                    <button>1</button>    
-                    ${task.content}
+                    <button class="section__listButton js-toggleButton ${
+                      task.done
+                        ? "section__toggleButton--done"
+                        : "section__toggleButton--notDone"
+                    }"></button>
+                        
+                    <p class="section__paragraph ${
+                      task.done ? "section__paragraph--done" : ""
+                    }">${task.content}</p>
                 </div>
-                    <button class="js-deleteButton">usuń</button>
+                    <button class="section__listButton section__listButton--delete js-deleteButton"></button>
             </li>
         `;
     }
@@ -67,6 +87,7 @@
     listOfTasksElement.innerHTML = list;
 
     deleteTask();
+    toggleDone();
   };
 
   const init = () => {

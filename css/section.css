@@ -79,10 +79,54 @@
     justify-content: space-between;
     padding: 10px;
     border-bottom: 2px solid #b6b3b5;
+    gap: 20px;
 }
 
 .section__contentContainer{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    
+}
+
+.section__paragraph{
+    margin: 0;
+}
+
+.section__paragraph--done{
+    text-decoration: line-through;
+}
+
+.section__listButton{
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.section__listButton:hover{
+    opacity: 0.85;
+}
+
+.section__listButton:active{
+    opacity: 0.70;
+}
+
+.section__toggleButton--done{
+    background-image: url(../images/check.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.section__toggleButton--notDone{
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.section__listButton--delete{
+    background-image: url(../images/delete.png);
+    background-size: cover;
+    background-position: center;
 }

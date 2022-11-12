@@ -10,4 +10,5 @@ html{
     font-family: "Roboto", sans-serif;
     background-color: #b6b3b5;
     padding: 10px;
+    word-break: break-word;
 }
