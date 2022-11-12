@@ -30,8 +30,24 @@
     listOfTasksElement.innerHTML = list;
   };
 
+  const addNewTask = (event) => {
+    event.preventDefault();
+
+    const inputElement = document.querySelector(".js-inputTask").value.trim();
+
+    if (inputElement === "") {
+      return;
+    }
+
+    tasks.push({ content: inputElement });
+    render();
+  };
+
   const init = () => {
     render();
+
+    const buttonElement = document.querySelector(".js-inputButton");
+    buttonElement.addEventListener("click", addNewTask);
   };
 
   init();
