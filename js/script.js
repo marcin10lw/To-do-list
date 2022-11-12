@@ -17,10 +17,12 @@
     let list = "";
     for (const task of tasks) {
       list += `
-            <li>
-                <button>1</button>    
-                ${task.content}
-                <button>2</button>
+            <li class="section__task">
+                <div>
+                    <button>1</button>    
+                    ${task.content}
+                </div>
+                    <button>2</button>
             </li>
         `;
     }

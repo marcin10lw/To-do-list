@@ -67,3 +67,16 @@
     padding: 0;
     font-weight: bold;
 }
+
+.section__listOfTasks{
+    list-style: none;
+    padding: 0;
+}
+
+.section__task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid #b6b3b5;
+}
