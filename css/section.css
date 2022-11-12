@@ -80,3 +80,9 @@
     padding: 10px;
     border-bottom: 2px solid #b6b3b5;
 }
+
+.section__contentContainer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
