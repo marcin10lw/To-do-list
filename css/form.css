@@ -1,0 +1,47 @@
+.form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+@media(max-width: 767px){
+    .form{
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.form__newTask{
+    padding: 10px;
+    border: 2px solid hsl(0, 0%, 84%);
+    flex-grow: 1;
+}
+
+@media(max-width: 767px){
+    .form__newTask{
+        width: 100%;
+    }
+}
+
+.form__button{
+    padding: 10px;
+    border: 2px solid #008080;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+
+@media(max-width: 767px){
+    .form__button{
+        width: 100%;
+    }
+}
+
+.form__button:hover{
+    opacity: 0.85;
+}
+
+.form__button:active{
+    opacity: 0.70;
+}

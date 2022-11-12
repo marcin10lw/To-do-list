@@ -1,0 +1,62 @@
+.listOfTasks{
+    list-style: none;
+    padding: 0;
+}
+
+.listOfTasks__task{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid hsl(0, 0%, 85%);
+    gap: 20px;
+}
+
+.listOfTasks__contentContainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.listOfTasks__paragraph{
+    margin: 0;
+}
+
+.listOfTasks__paragraph--done{
+    text-decoration: line-through;
+}
+
+.listOfTasks__listButton{
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.listOfTasks__listButton:hover{
+    opacity: 0.85;
+}
+
+.listOfTasks__listButton:active{
+    opacity: 0.70;
+}
+
+.listOfTasks__toggleButton--done{
+    background-image: url(../images/check.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.listOfTasks__toggleButton--notDone{
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.listOfTasks__listButton--delete{
+    background-image: url(../images/delete.png);
+    background-size: cover;
+    background-position: center;
+}

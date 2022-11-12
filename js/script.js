@@ -55,25 +55,25 @@
     let list = "";
     for (const task of tasks) {
       list += `
-        <li class="section__task">
-            <div class="section__contentContainer">
-                <button class="section__listButton js-toggleButton 
+        <li class="listOfTasks__task">
+            <div class="listOfTasks__contentContainer">
+                <button class="listOfTasks__listButton js-toggleButton 
                    ${
                      task.done
-                       ? "section__toggleButton--done"
-                       : "section__toggleButton--notDone"
+                       ? "listOfTasks__toggleButton--done"
+                       : "listOfTasks__toggleButton--notDone"
                    }">
                 </button>
                         
-                <p class="section__paragraph ${
-                  task.done ? "section__paragraph--done" : ""
+                <p class="listOfTasks__paragraph ${
+                  task.done ? "listOfTasks__paragraph--done" : ""
                 }">
                     ${task.content}
                 </p>
             </div>
                     <button class="
-                      section__listButton 
-                      section__listButton--delete 
+                      listOfTasks__listButton 
+                      listOfTasks__listButton--delete 
                       js-deleteButton">
                     </button>
         </li>

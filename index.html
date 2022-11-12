@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/container.css" />
     <link rel="stylesheet" href="css/section.css" />
     <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/listOfTasks.css" />
     <script defer src="js/script.js"></script>
   </head>
   <body class="body">
@@ -37,14 +39,12 @@
           </div>
 
           <div class="section__container">
-            <form class="section__form">
+            <form class="form">
               <input
-                class="section__newTask js-inputTask"
+                class="form__newTask js-inputTask"
                 placeholder="new task"
               />
-              <button class="section__button js-inputButton">
-                Dodaj zadanie
-              </button>
+              <button class="form__button js-inputButton">Dodaj zadanie</button>
             </form>
           </div>
         </section>
@@ -55,7 +55,7 @@
           </div>
 
           <div class="section__container">
-            <ul class="section__listOfTasks js-listOfTasks"></ul>
+            <ul class="listOfTasks js-listOfTasks"></ul>
           </div>
         </section>
       </main>
