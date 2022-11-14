@@ -12,10 +12,6 @@
     grid-gap: 10px;
 }
 
-.listOfTasks__content{
-    margin: 0;
-}
-
 .listOfTasks__content--done{
     text-decoration: line-through;
 }
