@@ -4,18 +4,12 @@
 }
 
 .listOfTasks__task{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    justify-content: space-between;
     padding: 10px;
     border-bottom: 2px solid hsl(0, 0%, 85%);
-    gap: 20px;
-}
-
-.listOfTasks__contentContainer{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    grid-gap: 10px;
 }
 
 .listOfTasks__content{

@@ -56,7 +56,7 @@
     for (const task of tasks) {
       tasksListHtmlContent += `
         <li class="listOfTasks__task">
-            <div class="listOfTasks__contentContainer">
+            
                 <button class="listOfTasks__listButton js-toggleButton 
                    ${
                      task.done
@@ -70,12 +70,12 @@
                 }">
                     ${task.content}
                 </span>
-            </div>
-                    <button class="
-                      listOfTasks__listButton 
-                      listOfTasks__listButton--delete 
-                      js-deleteButton">
-                    </button>
+            
+                <button class="
+                  listOfTasks__listButton 
+                  listOfTasks__listButton--delete 
+                  js-deleteButton">
+                </button>
         </li>
         `;
     }
