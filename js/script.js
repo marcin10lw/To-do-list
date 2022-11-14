@@ -65,11 +65,11 @@
                    }">
                 </button>
                         
-                <p class="listOfTasks__paragraph ${
-                  task.done ? "listOfTasks__paragraph--done" : ""
+                <span class="listOfTasks__content ${
+                  task.done ? "listOfTasks__content--done" : ""
                 }">
                     ${task.content}
-                </p>
+                </span>
             </div>
                     <button class="
                       listOfTasks__listButton 

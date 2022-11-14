@@ -18,11 +18,11 @@
     gap: 10px;
 }
 
-.listOfTasks__paragraph{
+.listOfTasks__content{
     margin: 0;
 }
 
-.listOfTasks__paragraph--done{
+.listOfTasks__content--done{
     text-decoration: line-through;
 }
 
