@@ -27,7 +27,7 @@
     clearField();
   };
 
-  const toggleDone = () => {
+  const bindToggleDone = () => {
     const toggleDoneButton = document.querySelectorAll(".js-toggleButton");
 
     toggleDoneButton.forEach((toggleButton, index) => {
@@ -38,7 +38,7 @@
     });
   };
 
-  const deleteTask = () => {
+  const bindDeleteTask = () => {
     const deleteButtonElements = document.querySelectorAll(".js-deleteButton");
 
     deleteButtonElements.forEach((deleteButton, index) => {
@@ -52,9 +52,9 @@
   const render = () => {
     const listOfTasksElement = document.querySelector(".js-listOfTasks");
 
-    let list = "";
+    let tasksListHtmlContent = "";
     for (const task of tasks) {
-      list += `
+      tasksListHtmlContent += `
         <li class="listOfTasks__task">
             <div class="listOfTasks__contentContainer">
                 <button class="listOfTasks__listButton js-toggleButton 
@@ -80,10 +80,10 @@
         `;
     }
 
-    listOfTasksElement.innerHTML = list;
+    listOfTasksElement.innerHTML = tasksListHtmlContent;
 
-    deleteTask();
-    toggleDone();
+    bindDeleteTask();
+    bindToggleDone();
   };
 
   const init = () => {
