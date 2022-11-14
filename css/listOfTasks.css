@@ -46,12 +46,11 @@
     background-image: url(../images/check.png);
     background-size: cover;
     background-position: center;
+    background-color: #008065;
 }
 
 .listOfTasks__toggleButton--notDone{
-    background-image: url(../images/background.png);
-    background-size: cover;
-    background-position: center;
+    background-color: #008065;
 }
 
 .listOfTasks__listButton--delete{
