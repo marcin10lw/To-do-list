@@ -32,12 +32,6 @@
     transition: opacity 200ms, transform 200ms;
 }
 
-@media(max-width: 767px){
-    .form__button{
-        width: 100%;
-    }
-}
-
 .form__button:hover{
     opacity: 0.85;
     transform: scale(1.1);
@@ -45,4 +39,14 @@
 
 .form__button:active{
     opacity: 0.70;
+}
+
+@media(max-width: 767px){
+    .form__button{
+        width: 100%;
+    }
+
+    .form__button:hover {
+        transform: scale(1);
+    }
 }
