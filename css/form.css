@@ -29,7 +29,7 @@
     border: 2px solid #008080;
     background-color: teal;
     color: white;
-    cursor: pointer;
+    transition: opacity 200ms, transform 200ms;
 }
 
 @media(max-width: 767px){
@@ -40,6 +40,7 @@
 
 .form__button:hover{
     opacity: 0.85;
+    transform: scale(1.1);
 }
 
 .form__button:active{

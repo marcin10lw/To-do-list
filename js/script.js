@@ -154,12 +154,15 @@
 
     if (tasks.length !== 0) {
       let tasksEventButtonsContent = `
-      <button class="js-hideDoneButton">
+      <button class="section__button js-hideDoneButton">
         ${hideDoneTasks ? "Show completed" : "Hide completed"}
       </button>
 
       <button 
-        class="js-completeAllButton"
+        class="section__button ${
+          tasks.every(({ done }) => done) ? "section__button--completed" : ""
+        } js-completeAllButton"
+
         ${tasks.every(({ done }) => done) ? "disabled" : ""}
       >
           Complete all

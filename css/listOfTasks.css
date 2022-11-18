@@ -25,11 +25,12 @@
     height: 30px;
     border: none;
     cursor: pointer;
-    flex-shrink: 0;
+    transition: opacity 150ms, transform 150ms;
 }
 
 .listOfTasks__listButton:hover{
     opacity: 0.85;
+    transform: scale(0.97);
 }
 
 .listOfTasks__listButton:active{
