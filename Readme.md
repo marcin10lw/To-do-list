@@ -14,6 +14,7 @@ YouCode is a frontend development online school with great community.
 
     -BEM
     -FLEXBOX
+    -IMMUTABILITY
     -ES6+ Features
 
 # Page Preview
