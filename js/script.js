@@ -28,14 +28,10 @@
     clearField();
   };
 
-  let doneValue = false;
-
   const toggleDone = (taskIndex) => {
-    doneValue = !doneValue;
-
     tasks = tasks.map((task) => {
       if (task === tasks[taskIndex]) {
-        return { ...task, done: doneValue };
+        return { ...task, done: !task.done };
       }
 
       return task;
