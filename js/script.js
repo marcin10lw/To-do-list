@@ -69,16 +69,46 @@
     });
   };
 
-  const bindButtonsEvents = () => {
-    if (tasks.length !== 0) {
-      const hideButtonElement = document.querySelector(".js-hideDoneButton");
+  const isAnyCompleted = () => {
+    return tasks.some(({ done }) => done);
+  };
 
-      hideButtonElement.addEventListener("click", () => {
-        hideDoneTasks = !hideDoneTasks;
-        render();
-      });
+  const hideDone = () => {
+    if (isAnyCompleted()) {
+      hideDoneTasks = !hideDoneTasks;
+      render();
     }
     return;
+  };
+
+  const bindHideDone = () => {
+    if (tasks.length !== 0) {
+      const hideDoneButton = document.querySelector(".js-hideDoneButton");
+
+      hideDoneButton.addEventListener("click", hideDone);
+    }
+    return;
+  };
+
+  const completeAllTasks = () => {
+    tasks = tasks.map((task) => {
+      return { ...task, done: true };
+    });
+
+    render();
+  };
+
+  const bindCompleteAll = () => {
+    if (tasks.length !== 0) {
+      const completeAllButton = document.querySelector(".js-completeAllButton");
+
+      completeAllButton.addEventListener("click", completeAllTasks);
+    }
+  };
+
+  const bindButtonsEvents = () => {
+    bindHideDone();
+    bindCompleteAll();
   };
 
   const renderTasks = () => {
@@ -124,8 +154,16 @@
 
     if (tasks.length !== 0) {
       let tasksEventButtonsContent = `
-      <button class="js-hideDoneButton">Hide completed</button>
-      <button class="js-completeAllButton">Complete all</button>
+      <button class="js-hideDoneButton">
+        ${hideDoneTasks ? "Show completed" : "Hide completed"}
+      </button>
+
+      <button 
+        class="js-completeAllButton"
+        ${tasks.every(({ done }) => done) ? "disabled" : ""}
+      >
+          Complete all
+      </button>
     `;
 
       buttonsContainerElement.innerHTML = tasksEventButtonsContent;
