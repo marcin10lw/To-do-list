@@ -20,6 +20,6 @@ YouCode is a frontend development online school with great community.
 
 ![to-do list preview](gifs/to-doListPreview.gif)
 
-#Try it out!
+# Try it out!
 
 [![](images/readmeImage.png)](https://marcin10lw.github.io/To-do-list/)
