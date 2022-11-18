@@ -87,7 +87,9 @@
     let tasksListHtmlContent = "";
     for (const task of tasks) {
       tasksListHtmlContent += `
-        <li class="listOfTasks__task ">
+        <li class="listOfTasks__task ${
+          task.done && hideDoneTasks ? "listOfTasks__task--hiden" : ""
+        }">
             
                 <button class="listOfTasks__listButton js-toggleButton 
                    ${

@@ -12,6 +12,10 @@
     grid-gap: 10px;
 }
 
+.listOfTasks__task--hiden {
+    display: none;
+}
+
 .listOfTasks__content--done{
     text-decoration: line-through;
 }
