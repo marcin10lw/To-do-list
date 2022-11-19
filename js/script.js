@@ -12,10 +12,7 @@
     inputContent.value = "";
   };
 
-  const addNewTask = (event) => {
-    event.preventDefault();
-    setFocus();
-
+  const addNewTask = () => {
     const inputContent = document.querySelector(".js-inputTask").value.trim();
 
     if (inputContent === "") {
@@ -28,13 +25,22 @@
     clearField();
   };
 
+  const onAddTaskButtonClick = (event) => {
+    event.preventDefault();
+
+    addNewTask();
+    setFocus();
+  };
+
   const toggleDone = (taskIndex) => {
     tasks = tasks.map((task) => {
-      if (task === tasks[taskIndex]) {
-        return { ...task, done: !task.done };
-      }
+      // if (task === tasks[taskIndex]) {
+      //   return { ...task, done: !task.done };
+      // }
 
-      return task;
+      // return task;
+
+      task === tasks[taskIndex] ? { ...task, done: !task.done } : task;
     });
 
     render();
@@ -183,7 +189,7 @@
   const init = () => {
     render();
     const buttonElement = document.querySelector(".js-inputButton");
-    buttonElement.addEventListener("click", addNewTask);
+    buttonElement.addEventListener("click", onAddTaskButtonClick);
   };
 
   init();
