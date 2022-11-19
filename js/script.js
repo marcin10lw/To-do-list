@@ -64,16 +64,9 @@
     });
   };
 
-  const isAnyCompleted = () => {
-    return tasks.some(({ done }) => done);
-  };
-
   const hideDone = () => {
-    if (isAnyCompleted()) {
-      hideDoneTasks = !hideDoneTasks;
-      render();
-    }
-    return;
+    hideDoneTasks = !hideDoneTasks;
+    render();
   };
 
   const bindHideDone = () => {
