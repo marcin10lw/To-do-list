@@ -34,15 +34,8 @@
 
   const toggleDone = (taskIndex) => {
     tasks = tasks.map((task) => {
-      // if (task === tasks[taskIndex]) {
-      //   return { ...task, done: !task.done };
-      // }
-
-      // return task;
-
-      task === tasks[taskIndex] ? { ...task, done: !task.done } : task;
+      return task === tasks[taskIndex] ? { ...task, done: !task.done } : task;
     });
-
     render();
   };
 
