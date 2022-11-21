@@ -107,25 +107,25 @@
           task.done && hideDoneTasks ? "listOfTasks__task--hiden" : ""
         }">
             
-                <button class="listOfTasks__listButton js-toggleButton 
-                   ${
-                     task.done
-                       ? "listOfTasks__toggleButton--done"
-                       : "listOfTasks__toggleButton--notDone"
-                   }">
-                </button>
+               <button class="listOfTasks__listButton js-toggleButton 
+                  ${
+                    task.done
+                      ? "listOfTasks__toggleButton--done"
+                      : "listOfTasks__toggleButton--notDone"
+                  }">
+               </button>
                         
-                <span class="listOfTasks__content ${
-                  task.done ? "listOfTasks__content--done" : ""
-                }">
-                    ${task.content}
-                </span>
+               <span class="listOfTasks__content ${
+                 task.done ? "listOfTasks__content--done" : ""
+               }">
+                  ${task.content}
+               </span>
             
-                <button class="
-                  listOfTasks__listButton 
-                  listOfTasks__listButton--delete 
-                  js-deleteButton">
-                </button>
+               <button class="
+                listOfTasks__listButton 
+                 listOfTasks__listButton--delete 
+                 js-deleteButton">
+               </button>
         </li>
         `;
 
