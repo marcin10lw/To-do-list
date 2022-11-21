@@ -45,7 +45,7 @@
 
 .section__button {
     border: none;
-    background-color: white;
+    background-color: transparent;
     color: teal;
     transition: opacity 150ms;
 }
