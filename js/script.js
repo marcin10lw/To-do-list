@@ -12,9 +12,7 @@
     inputContent.value = "";
   };
 
-  const addNewTask = () => {
-    const inputContent = document.querySelector(".js-inputTask").value.trim();
-
+  const addNewTask = (inputContent) => {
     if (inputContent === "") {
       return;
     }
@@ -27,8 +25,9 @@
 
   const onAddTaskButtonClick = (event) => {
     event.preventDefault();
+    const inputContent = document.querySelector(".js-inputTask").value.trim();
 
-    addNewTask();
+    addNewTask(inputContent);
     setFocus();
   };
 
@@ -36,6 +35,7 @@
     tasks = tasks.map((task) => {
       return task === tasks[taskIndex] ? { ...task, done: !task.done } : task;
     });
+
     render();
   };
 
@@ -64,7 +64,7 @@
     });
   };
 
-  const hideDone = () => {
+  const toggleHideDone = () => {
     hideDoneTasks = !hideDoneTasks;
     render();
   };
@@ -73,7 +73,7 @@
     if (tasks.length !== 0) {
       const hideDoneButton = document.querySelector(".js-hideDoneButton");
 
-      hideDoneButton.addEventListener("click", hideDone);
+      hideDoneButton.addEventListener("click", toggleHideDone);
     }
     return;
   };
@@ -102,9 +102,7 @@
   const renderTasks = () => {
     const listOfTasksElement = document.querySelector(".js-listOfTasks");
 
-    let tasksListHtmlContent = "";
-    for (const task of tasks) {
-      tasksListHtmlContent += `
+    const taskToHTML = (task) => `
         <li class="listOfTasks__task ${
           task.done && hideDoneTasks ? "listOfTasks__task--hiden" : ""
         }">
@@ -130,9 +128,8 @@
                 </button>
         </li>
         `;
-    }
 
-    listOfTasksElement.innerHTML = tasksListHtmlContent;
+    listOfTasksElement.innerHTML = tasks.map(taskToHTML).join("");
   };
 
   const renderButtons = () => {
@@ -165,10 +162,10 @@
 
   const render = () => {
     renderTasks();
-    renderButtons();
-
     bindDeleteTask();
     bindToggleDone();
+
+    renderButtons();
     bindButtonsEvents();
   };
 
