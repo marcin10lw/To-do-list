@@ -1,0 +1,26 @@
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media(max-width: 767px) {
+    .buttonsContainer {
+        flex-direction: column;
+    }
+}
+
+.buttonsContainer__button {
+    border: none;
+    background-color: transparent;
+    color: teal;
+    transition: opacity 150ms;
+}
+
+.buttonsContainer__button:disabled {
+    color: rgb(193, 196, 196);
+}
+
+.buttonsContainer__button:hover {
+    opacity: 0.8;
+}

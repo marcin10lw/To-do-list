@@ -30,30 +30,3 @@
     font-weight: bold;
     align-self: flex-start;
 }
-
-.section__eventButtonsContainer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-@media(max-width: 767px) {
-    .section__eventButtonsContainer {
-        flex-direction: column;
-    }
-}
-
-.section__button {
-    border: none;
-    background-color: transparent;
-    color: teal;
-    transition: opacity 150ms;
-}
-
-.section__button:disabled {
-    color: rgb(193, 196, 196);
-}
-
-.section__button:hover {
-    opacity: 0.8;
-}
