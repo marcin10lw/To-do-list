@@ -50,10 +50,10 @@
     transition: opacity 150ms;
 }
 
-.section__button:hover {
-    opacity: 0.8;
+.section__button:disabled {
+    color: rgb(193, 196, 196);
 }
 
-.section__button--completed {
-    color: rgb(193, 196, 196);
+.section__button:hover {
+    opacity: 0.8;
 }

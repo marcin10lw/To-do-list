@@ -144,9 +144,7 @@
       </button>
 
       <button 
-        class="section__button ${
-          tasks.every(({ done }) => done) ? "section__button--completed" : ""
-        } js-completeAllButton"
+        class="section__button  js-completeAllButton"
 
         ${tasks.every(({ done }) => done) ? "disabled" : ""}
       >
